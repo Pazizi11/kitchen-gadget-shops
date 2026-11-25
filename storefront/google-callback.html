@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signing in with Google - Kitchen Gadget Shops</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main
+    class="account-page container"
+    style="min-height: 70vh; display: flex; align-items: center; justify-content: center;"
+  >
+    <div
+      class="account-card"
+      style="width: 100%; max-width: 460px; text-align: center;"
+    >
+      <h1 id="googleAuthTitle">Signing you in...</h1>
+
+      <p
+        id="googleAuthMessage"
+        class="account-muted"
+        style="margin-top: 12px;"
+      >
+        Please wait while we complete your Google sign-in.
+      </p>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/customer-auth.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+      const title = document.getElementById('googleAuthTitle');
+      const message = document.getElementById('googleAuthMessage');
+
+      try {
+        const result = await completeGoogleCustomerAuth();
+
+        if (!result || !result.token) {
+          throw new Error(
+            'Google sign-in completed without a customer session.'
+          );
+        }
+
+        title.textContent = 'Sign-in successful';
+        message.textContent = 'Redirecting to your account...';
+
+        const returnUrl = getGoogleAuthReturnUrl();
+
+        setTimeout(function () {
+          window.location.href = returnUrl;
+        }, 300);
+
+      } catch (error) {
+        console.error(
+          'Google customer authentication failed:',
+          error
+        );
+
+        title.textContent = 'Google sign-in failed';
+        message.textContent =
+          error && error.message
+            ? error.message
+            : 'We could not complete your Google sign-in. Please try again.';
+
+        const retry = document.createElement('a');
+
+        retry.href = 'login.html';
+        retry.textContent = 'Return to login';
+        retry.style.display = 'inline-block';
+        retry.style.marginTop = '20px';
+
+        message.parentNode.appendChild(retry);
+      }
+    });
+  </script>
+</body>
+</html>

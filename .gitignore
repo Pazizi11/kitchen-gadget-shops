@@ -1,0 +1,37 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Dependencies and generated files
+node_modules/
+.medusa/
+dist/
+build/
+coverage/
+.turbo/
+.cache/
+
+# Logs and temporary files
+*.log
+tmp-*
+*.tmp
+
+# Backups
+*backup*
+*before-*
+*.bak*
+*.save*
+
+# Database exports and private data
+*.sql
+*.dump
+*.sqlite
+*.db
+reports/

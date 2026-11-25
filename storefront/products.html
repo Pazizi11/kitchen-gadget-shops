@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All Kitchen Gadgets â€” Kitchen Gadget Shops</title>
+<meta name="description" content="Browse our full collection of kitchen gadgets, tools, bakeware, utensils and small appliances.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header-mount"></header>
+
+<div class="container">
+  <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span id="breadcrumbCurrent">Shop All</span></nav>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:24px;">
+      <h2 id="pageTitle">Shop All Gadgets</h2>
+      <p>Everything you need to upgrade your kitchen, all in one place.</p>
+    </div>
+
+    <div id="categoryScroller" class="category-scroller"></div>
+
+    <div class="filters-bar">
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search gadgets...">
+      </div>
+      <select id="sortSelect" class="sort-select">
+        <option value="featured">Sort: Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+        <option value="newest">Newest</option>
+      </select>
+    </div>
+
+    <p id="resultCount" style="color:var(--color-muted); font-size:0.88rem; margin-bottom:18px;"></p>
+
+    <div id="productGrid" class="product-grid"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <h2>No gadgets found</h2>
+      <p>Try a different search term or category.</p>
+      <a href="products.html" class="btn btn-primary">Reset Filters</a>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer-mount"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/customer-auth.js"></script>
+<script src="js/site-search.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/index.js"></script>
+<script src="js/products.js"></script>
+<script>
+  renderHeader('products');
+  renderFooter();
+</script>
+</body>
+</html>
+
+

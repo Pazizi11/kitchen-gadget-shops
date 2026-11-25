@@ -1,0 +1,2092 @@
+﻿/* =========================================================
+   KITCHEN GADGET SHOPS — HOMEPAGE 1
+   Discovery / Marketplace Homepage
+========================================================= */
+
+.discovery-home {
+  margin: 0;
+  background: #FFFFFF;
+  color: #5B5245;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.discovery-container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.discovery-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #E3D8C6;
+  backdrop-filter: blur(12px);
+}
+
+.discovery-header-main {
+  width: min(1280px, calc(100% - 40px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.discovery-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #12294A;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.discovery-logo-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #12294A;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.discovery-logo-text {
+  font-family: Poppins, Inter, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.discovery-search {
+  flex: 1;
+  max-width: 620px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #E3D8C6;
+  border-radius: 999px;
+  background: #F5EFE4;
+  overflow: hidden;
+  transition: .2s ease;
+}
+
+.discovery-search:focus-within {
+  background: #FFFFFF;
+  border-color: #12294A;
+  box-shadow: 0 0 0 4px rgba(17,24,39,.07);
+}
+
+.discovery-search > i {
+  margin-left: 17px;
+  color: #5B5245;
+}
+
+.discovery-search input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0 14px;
+  font: inherit;
+}
+
+.discovery-search button {
+  height: 100%;
+  border: 0;
+  padding: 0 22px;
+  background: #12294A;
+  color: #FFFFFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.discovery-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.discovery-login-link {
+  color: #12294A;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.discovery-join-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #12294A;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.discovery-cart-link {
+  color: #12294A;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* =========================================================
+   CATEGORY NAV
+========================================================= */
+
+.discovery-category-nav {
+  border-top: 1px solid #EDE4D3;
+}
+
+.discovery-category-inner {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.discovery-category-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.discovery-category-inner a {
+  flex: 0 0 auto;
+  color: #5B5245;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.discovery-category-inner a:hover {
+  color: #12294A;
+}
+
+/* =========================================================
+   TRENDING
+========================================================= */
+
+.discovery-trending {
+  border-bottom: 1px solid #EDE4D3;
+  background: #F5EFE4;
+}
+
+.discovery-trending .discovery-container {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.discovery-trending-label {
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #5B5245;
+}
+
+.discovery-trending-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.discovery-trending-links::-webkit-scrollbar {
+  display: none;
+}
+
+.discovery-trending-links a {
+  flex: 0 0 auto;
+  color: #5B5245;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.discovery-hero {
+  padding: 70px 0 80px;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(254,215,170,.42), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(219,234,254,.5), transparent 35%),
+    #F5EFE4;
+}
+
+.discovery-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr);
+  gap: 65px;
+  align-items: center;
+}
+
+.discovery-eyebrow,
+.discovery-section-eyebrow {
+  display: inline-block;
+  color: #5B5245;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.discovery-hero h1 {
+  max-width: 680px;
+  margin: 16px 0 22px;
+  color: #12294A;
+  font-family: Poppins, Inter, sans-serif;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.discovery-hero-content > p {
+  max-width: 620px;
+  margin: 0;
+  color: #5B5245;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.discovery-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.discovery-primary-button,
+.discovery-secondary-button {
+  min-height: 50px;
+  padding: 0 23px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.discovery-primary-button {
+  border: 1px solid #12294A;
+  background: #12294A;
+  color: #FFFFFF;
+}
+
+.discovery-primary-button i {
+  margin-left: 8px;
+}
+
+.discovery-secondary-button {
+  border: 1px solid #E3D8C6;
+  background: #FFFFFF;
+  color: #12294A;
+}
+
+.discovery-hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.discovery-hero-trust span {
+  color: #5B5245;
+  font-size: 13px;
+}
+
+.discovery-hero-trust i {
+  margin-right: 6px;
+  color: #12294A;
+}
+
+.discovery-hero-visual {
+  position: relative;
+}
+
+.discovery-gif-frame {
+  position: relative;
+  min-height: 490px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, #E3D8C6, #F5EFE4);
+  box-shadow: 0 30px 80px rgba(17,24,39,.12);
+}
+
+.discovery-gif-placeholder {
+  width: 72%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px dashed #8A7D6B;
+  border-radius: 24px;
+  color: #5B5245;
+}
+
+.discovery-gif-placeholder i {
+  font-size: 60px;
+  color: #12294A;
+}
+
+.discovery-gif-placeholder span {
+  font-weight: 800;
+  color: #12294A;
+}
+
+.discovery-gif-placeholder small {
+  color: #5B5245;
+}
+
+.discovery-floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 17px;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 16px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 15px 35px rgba(17,24,39,.12);
+}
+
+.discovery-floating-card i {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #EDE4D3;
+  color: #12294A;
+}
+
+.discovery-floating-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.discovery-floating-card strong {
+  font-size: 13px;
+}
+
+.discovery-floating-card span {
+  color: #5B5245;
+  font-size: 11px;
+}
+
+.discovery-floating-card-one {
+  top: 35px;
+  left: -25px;
+}
+
+.discovery-floating-card-two {
+  right: -20px;
+  bottom: 35px;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.discovery-section {
+  padding: 85px 0;
+}
+
+.discovery-section-soft {
+  background: #F5EFE4;
+}
+
+.discovery-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.discovery-section-heading h2,
+.discovery-dark-heading h2,
+.discovery-newsletter h2 {
+  margin: 8px 0 8px;
+  font-family: Poppins, Inter, sans-serif;
+  color: #12294A;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -.035em;
+}
+
+.discovery-section-heading p {
+  margin: 0;
+  color: #5B5245;
+}
+
+.discovery-view-all {
+  flex: 0 0 auto;
+  color: #12294A;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.discovery-view-all i {
+  margin-left: 7px;
+}
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+.discovery-category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.discovery-category-card {
+  padding: 14px;
+  border: 1px solid #E3D8C6;
+  border-radius: 20px;
+  background: #FFFFFF;
+  color: #12294A;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.discovery-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(17,24,39,.09);
+}
+
+.discovery-category-image {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #EDE4D3;
+  font-size: 35px;
+}
+
+.discovery-category-card h3 {
+  margin: 15px 3px 5px;
+  font-size: 15px;
+}
+
+.discovery-category-card span {
+  margin-left: 3px;
+  color: #5B5245;
+  font-size: 12px;
+}
+
+/* =========================================================
+   NEED CARDS
+========================================================= */
+
+.discovery-needs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.discovery-need-card {
+  display: grid;
+  grid-template-columns: 58px 1fr 20px;
+  align-items: center;
+  gap: 17px;
+  padding: 22px;
+  border: 1px solid #E3D8C6;
+  border-radius: 18px;
+  background: #FFFFFF;
+  color: #12294A;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+
+.discovery-need-card:hover {
+  transform: translateY(-3px);
+}
+
+.discovery-need-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #EDE4D3;
+  font-size: 21px;
+}
+
+.discovery-need-card h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.discovery-need-card p {
+  margin: 0;
+  color: #5B5245;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.discovery-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.discovery-product-loading {
+  grid-column: 1 / -1;
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  color: #5B5245;
+  border: 1px dashed #E3D8C6;
+  border-radius: 20px;
+}
+
+.discovery-product-loading i {
+  margin-right: 8px;
+}
+
+/* =========================================================
+   DARK BENEFITS
+========================================================= */
+
+.discovery-section-dark {
+  background: #12294A;
+  color: #FFFFFF;
+}
+
+.discovery-dark-heading {
+  max-width: 700px;
+  margin-bottom: 42px;
+}
+
+.discovery-dark-heading h2 {
+  color: #FFFFFF;
+}
+
+.discovery-dark-heading p {
+  margin: 0;
+  color: #E3D8C6;
+}
+
+.discovery-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.discovery-benefit i {
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+.discovery-benefit h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.discovery-benefit p {
+  margin: 0;
+  color: #E3D8C6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.discovery-newsletter {
+  padding: 70px 0;
+  background: #EDE4D3;
+}
+
+.discovery-newsletter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.discovery-newsletter h2 {
+  max-width: 600px;
+}
+
+.discovery-newsletter p {
+  margin: 0;
+  color: #5B5245;
+}
+
+.discovery-newsletter-form {
+  min-width: min(100%, 440px);
+  display: flex;
+  gap: 8px;
+}
+
+.discovery-newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 0 17px;
+  border: 1px solid #E3D8C6;
+  border-radius: 999px;
+  outline: 0;
+  font: inherit;
+}
+
+.discovery-newsletter-form button {
+  height: 50px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: #12294A;
+  color: #FFFFFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =========================================================
+   LOGIN MODAL
+========================================================= */
+
+.discovery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.discovery-modal.is-open {
+  display: flex;
+}
+
+.discovery-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17,24,39,.62);
+  backdrop-filter: blur(5px);
+}
+
+.discovery-modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(450px, 100%);
+  padding: 34px;
+  border-radius: 25px;
+  background: #FFFFFF;
+  box-shadow: 0 30px 100px rgba(0,0,0,.25);
+}
+
+.discovery-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #EDE4D3;
+  color: #5B5245;
+  cursor: pointer;
+}
+
+.discovery-modal-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.discovery-modal-logo strong {
+  font-family: Poppins, Inter, sans-serif;
+}
+
+.discovery-modal-card h2 {
+  margin: 0 0 8px;
+  color: #12294A;
+  font-family: Poppins, Inter, sans-serif;
+  font-size: 28px;
+}
+
+.discovery-modal-subtitle {
+  margin: 0 0 25px;
+  color: #5B5245;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.discovery-login-form {
+  display: grid;
+  gap: 8px;
+}
+
+.discovery-login-form label {
+  color: #5B5245;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.discovery-login-form input {
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #E3D8C6;
+  border-radius: 10px;
+  outline: 0;
+  font: inherit;
+}
+
+.discovery-login-form input:focus {
+  border-color: #12294A;
+  box-shadow: 0 0 0 4px rgba(17,24,39,.07);
+}
+
+.discovery-modal-primary,
+.discovery-google-button {
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.discovery-modal-primary {
+  margin-top: 10px;
+  border: 0;
+  background: #12294A;
+  color: #FFFFFF;
+}
+
+.discovery-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  color: #8A7D6B;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.discovery-divider::before,
+.discovery-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #E3D8C6;
+}
+
+.discovery-google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #E3D8C6;
+  background: #FFFFFF;
+  color: #12294A;
+}
+
+.discovery-google-icon {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.discovery-create-account {
+  margin: 20px 0 0;
+  text-align: center;
+  color: #5B5245;
+  font-size: 13px;
+}
+
+.discovery-create-account a {
+  color: #12294A;
+  font-weight: 700;
+}
+
+.discovery-modal-note {
+  margin: 18px 0 0;
+  text-align: center;
+  color: #8A7D6B;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .discovery-header-main {
+    flex-wrap: wrap;
+    padding: 13px 0;
+  }
+
+  .discovery-search {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .discovery-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discovery-hero-visual {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .discovery-category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .discovery-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .discovery-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .discovery-newsletter-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .discovery-newsletter-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .discovery-container,
+  .discovery-header-main,
+  .discovery-category-inner {
+    width: min(100% - 24px, 1200px);
+  }
+
+  .discovery-logo-text {
+    font-size: 15px;
+  }
+
+  .discovery-actions {
+    gap: 9px;
+  }
+
+  .discovery-login-link {
+    font-size: 13px;
+  }
+
+  .discovery-join-button {
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .discovery-cart-link {
+    display: none;
+  }
+
+  .discovery-trending .discovery-container {
+    gap: 10px;
+  }
+
+  .discovery-trending-label {
+    display: none;
+  }
+
+  .discovery-hero {
+    padding: 48px 0 55px;
+  }
+
+  .discovery-hero h1 {
+    font-size: 40px;
+  }
+
+  .discovery-hero-content > p {
+    font-size: 16px;
+  }
+
+  .discovery-gif-frame {
+    min-height: 350px;
+  }
+
+  .discovery-floating-card-one {
+    left: 8px;
+  }
+
+  .discovery-floating-card-two {
+    right: 8px;
+  }
+
+  .discovery-section {
+    padding: 60px 0;
+  }
+
+  .discovery-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .discovery-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .discovery-needs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discovery-product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .discovery-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discovery-newsletter-form {
+    flex-direction: column;
+  }
+
+  .discovery-newsletter-form input,
+  .discovery-newsletter-form button {
+    width: 100%;
+  }
+
+  .discovery-modal-card {
+    padding: 28px 22px;
+  }
+}
+
+
+/* =========================================================
+   KITCHEN GADGET SHOPS — HOMEPAGE 2 COLOR MATCH
+   Accent overrides
+========================================================= */
+
+.discovery-logo-mark,
+.discovery-search button,
+.discovery-join-button,
+.discovery-primary-button,
+.discovery-modal-primary,
+.discovery-newsletter-form button {
+  background: #C55B2C;
+}
+
+.discovery-search button:hover,
+.discovery-join-button:hover,
+.discovery-primary-button:hover,
+.discovery-modal-primary:hover,
+.discovery-newsletter-form button:hover {
+  background: #A84B22;
+}
+
+.discovery-logo,
+.discovery-login-link,
+.discovery-cart-link,
+.discovery-category-inner a:hover,
+.discovery-view-all,
+.discovery-category-card,
+.discovery-need-card,
+.discovery-google-button,
+.discovery-create-account a {
+  color: #12294A;
+}
+
+.discovery-primary-button {
+  border-color: #C55B2C;
+}
+
+.discovery-secondary-button {
+  border-color: #E3D8C6;
+  background: #FFFFFF;
+  color: #12294A;
+}
+
+.discovery-section-dark {
+  background: #12294A;
+}
+
+.discovery-hero {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(232,168,124,.42), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(237,228,211,.70), transparent 35%),
+    #F5EFE4;
+}
+
+.discovery-newsletter {
+  background: #EDE4D3;
+}
+
+.discovery-category-image,
+.discovery-need-icon,
+.discovery-floating-card i,
+.discovery-modal-close {
+  background: #EDE4D3;
+}
+
+.discovery-search {
+  background: #F5EFE4;
+  border-color: #E3D8C6;
+}
+
+.discovery-search:focus-within {
+  background: #FFFFFF;
+  border-color: #C55B2C;
+  box-shadow: 0 0 0 4px rgba(197,91,44,.10);
+}
+
+.discovery-login-form input:focus {
+  border-color: #C55B2C;
+  box-shadow: 0 0 0 4px rgba(197,91,44,.10);
+}
+
+.discovery-category-card,
+.discovery-need-card {
+  border-color: #E3D8C6;
+  background: #FFFFFF;
+}
+
+.discovery-modal-card {
+  background: #FFFFFF;
+}
+
+.discovery-modal-close {
+  color: #12294A;
+}
+
+.discovery-section-soft {
+  background: #F5EFE4;
+}
+
+.discovery-gif-frame {
+  background:
+    linear-gradient(135deg, #EDE4D3, #F5EFE4);
+}
+
+.discovery-gif-placeholder {
+  border-color: #E8A87C;
+}
+
+.discovery-gif-placeholder i {
+  color: #C55B2C;
+}
+
+.discovery-floating-card {
+  background: rgba(255,255,255,.96);
+  border-color: rgba(227,216,198,.85);
+}
+
+.discovery-hero-trust i {
+  color: #C55B2C;
+}
+
+.discovery-benefit i {
+  color: #E8A87C;
+}
+/* =========================================================
+   SEARCH SUGGESTIONS — FUNCTIONAL UI
+   ========================================================= */
+
+.discovery-search {
+  position: relative;
+}
+
+.discovery-search-suggestions {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid #E3D8C6;
+  border-radius: 14px;
+  background: #FFFFFF;
+  box-shadow: 0 18px 45px rgba(17,24,39,.14);
+}
+
+.discovery-search-suggestions.is-visible {
+  display: block;
+}
+
+.discovery-search-suggestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 0;
+  border-bottom: 1px solid #EDE4D3;
+  background: #FFFFFF;
+  color: #12294A;
+  text-align: left;
+  cursor: pointer;
+}
+
+.discovery-search-suggestion:last-child {
+  border-bottom: 0;
+}
+
+.discovery-search-suggestion:hover {
+  background: #F5EFE4;
+}
+
+.discovery-search-suggestion-image {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #F5EFE4;
+  color: #12294A;
+}
+
+.discovery-search-suggestion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discovery-search-suggestion-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.discovery-search-suggestion-info strong {
+  overflow: hidden;
+  color: #12294A;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.discovery-search-suggestion-info small {
+  color: #5B5245;
+  font-size: 12px;
+}
+
+.discovery-search-empty {
+  padding: 16px;
+  color: #5B5245;
+  font-size: 14px;
+}
+
+.discovery-selected-product {
+  display: grid;
+  grid-template-columns: minmax(260px, 42%) 1fr;
+  gap: 34px;
+  overflow: hidden;
+  border: 1px solid #E3D8C6;
+  border-radius: 24px;
+  background: #FFFFFF;
+  box-shadow: 0 20px 50px rgba(17,24,39,.10);
+}
+
+.discovery-selected-product-image {
+  min-height: 320px;
+  background: #F5EFE4;
+}
+
+.discovery-selected-product-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: block;
+  object-fit: cover;
+}
+
+.discovery-selected-product-placeholder {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  color: #12294A;
+  font-size: 52px;
+}
+
+.discovery-selected-product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px;
+}
+
+.discovery-selected-product-content h3 {
+  margin: 8px 0 12px;
+  color: #12294A;
+  font-family: Poppins, Inter, sans-serif;
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.discovery-selected-product-content p {
+  margin: 0 0 20px;
+  color: #5B5245;
+  line-height: 1.7;
+}
+
+.discovery-selected-product-price {
+  color: #12294A;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.discovery-selected-product-login-price {
+  width: fit-content;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #C55B2C;
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.discovery-selected-product-login-price:hover {
+  opacity: .92;
+}
+
+@media (max-width: 700px) {
+
+  .discovery-search-suggestions {
+    left: -10px;
+    right: -10px;
+  }
+
+  .discovery-selected-product {
+    grid-template-columns: 1fr;
+  }
+
+  .discovery-selected-product-image,
+  .discovery-selected-product-image img,
+  .discovery-selected-product-placeholder {
+    min-height: 250px;
+  }
+
+  .discovery-selected-product-content {
+    padding: 24px;
+  }
+
+}
+/* =========================================================
+   TRENDING KITCHEN FINDS CAROUSEL
+   Homepage 1 / DISCOVER
+   ========================================================= */
+
+#discoveryProductGrid {
+  width: 100%;
+  min-width: 0;
+}
+
+.discovery-trending-carousel {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  padding: 4px 48px 14px;
+  box-sizing: border-box;
+}
+
+.discovery-trending-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: max-content;
+  transition: transform .55s ease;
+  will-change: transform;
+}
+
+.discovery-trending-card {
+  position: relative;
+  flex: 0 0 calc((100% - 80px) / 5);
+  width: calc((100% - 80px) / 5);
+  min-width: 0;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+  box-shadow: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform .2s ease;
+}
+
+.discovery-trending-card:hover {
+  transform: translateY(-3px);
+}
+
+.discovery-trending-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #EDE4D3;
+}
+
+.discovery-trending-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discovery-trending-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #5B5245;
+  font-size: 13px;
+  text-align: center;
+}
+
+.discovery-trending-badge {
+  position: absolute;
+  left: 9px;
+  bottom: 9px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #12294A;
+  color: #F5EFE4;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .01em;
+}
+
+.discovery-trending-content {
+  display: block;
+  min-height: 0;
+  padding: 11px 2px 4px;
+  box-sizing: border-box;
+}
+
+.discovery-trending-content h3 {
+  display: -webkit-box;
+  margin: 0 0 7px;
+  overflow: hidden;
+  color: #12294A;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.discovery-trending-price {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #C55B2C;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.discovery-trending-price:hover {
+  text-decoration: underline;
+}
+
+.discovery-trending-arrow {
+  position: absolute;
+  top: 42%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid #E3D8C6;
+  border-radius: 50%;
+  background: #F5EFE4;
+  color: #12294A;
+  box-shadow: 0 2px 8px rgba(18, 41, 74, .12);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.discovery-trending-arrow:hover {
+  background: #EDE4D3;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.discovery-trending-arrow.prev {
+  left: 2px;
+}
+
+.discovery-trending-arrow.next {
+  right: 2px;
+}
+
+.discovery-trending-arrow:disabled {
+  opacity: .35;
+  cursor: default;
+  transform: translateY(-50%);
+}
+
+.discovery-trending-empty {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  border: 1px solid #E3D8C6;
+  border-radius: 12px;
+  background: #F5EFE4;
+  color: #5B5245;
+  text-align: center;
+}
+
+@media (max-width: 1100px) and (min-width: 701px) {
+
+  .discovery-trending-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .discovery-trending-carousel {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .discovery-trending-track {
+    gap: 14px;
+  }
+
+  .discovery-trending-card {
+    flex: 0 0 calc(100vw - 110px);
+    width: calc(100vw - 110px);
+    min-width: calc(100vw - 110px);
+    max-width: 260px;
+  }
+
+  .discovery-trending-content {
+    padding-top: 10px;
+  }
+
+  .discovery-trending-content h3 {
+    font-size: 14px;
+  }
+
+  .discovery-trending-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+}
+
+
+/* ============================================================
+   TRENDING CAROUSEL — FULL WIDTH FIVE-CARD RAIL
+   Final layout override
+============================================================ */
+
+#discoveryProductGrid {
+  width: 100%;
+  min-width: 0;
+}
+
+.discovery-trending-carousel {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.discovery-trending-track {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.discovery-trending-card {
+  flex: 0 0 calc((100% - 80px) / 5);
+  width: calc((100% - 80px) / 5);
+  min-width: 0;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1100px) and (min-width: 701px) {
+  .discovery-trending-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 700px) {
+  .discovery-trending-card {
+    flex: 0 0 calc(100vw - 110px);
+    width: calc(100vw - 110px);
+    min-width: calc(100vw - 110px);
+    max-width: 260px;
+  }
+}
+
+
+/* ============================================================
+   TRENDING CAROUSEL — LARGE PRODUCT VIEW
+============================================================ */
+
+#discoveryProductGrid {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.discovery-trending-carousel {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.discovery-trending-track {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.discovery-trending-card {
+  flex: 0 0 calc((100% - 72px) / 4);
+  width: calc((100% - 72px) / 4);
+  min-width: 0;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.discovery-trending-image-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.discovery-trending-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discovery-trending-content {
+  padding: 13px 3px 6px;
+}
+
+.discovery-trending-content h3 {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.discovery-trending-price {
+  font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 1100px) and (min-width: 701px) {
+  .discovery-trending-track {
+    gap: 20px;
+  }
+
+  .discovery-trending-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .discovery-trending-carousel {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .discovery-trending-track {
+    gap: 16px;
+  }
+
+  .discovery-trending-card {
+    flex: 0 0 calc(100vw - 110px);
+    width: calc(100vw - 110px);
+    min-width: calc(100vw - 110px);
+    max-width: 300px;
+  }
+
+  .discovery-trending-content h3 {
+    font-size: 14px;
+  }
+}
+
+
+/* ============================================================
+   TRENDING PRODUCTS — FIVE LARGE FULL-WIDTH CARDS
+   Professional desktop carousel layout
+============================================================ */
+
+/* Expand the carousel beyond the normal content container */
+.discovery-trending-carousel {
+  width: 100vw;
+  max-width: none;
+  min-width: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Full-width horizontal product rail */
+.discovery-trending-track {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Five LARGE products visible on desktop */
+.discovery-trending-card {
+  flex: 0 0 calc((100% - 80px) / 5);
+  width: calc((100% - 80px) / 5);
+  min-width: 0;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* Large product photography */
+.discovery-trending-image-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.discovery-trending-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* More generous product information area */
+.discovery-trending-content {
+  padding: 14px 4px 8px;
+  box-sizing: border-box;
+}
+
+.discovery-trending-content h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.discovery-trending-price {
+  font-size: 14px;
+}
+
+/* ============================================================
+   LARGE DESKTOP
+   Give the products even more visual presence on wide screens
+============================================================ */
+
+@media (min-width: 1400px) {
+  .discovery-trending-carousel {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .discovery-trending-track {
+    gap: 24px;
+  }
+
+  .discovery-trending-card {
+    flex-basis: calc((100% - 96px) / 5);
+    width: calc((100% - 96px) / 5);
+  }
+
+  .discovery-trending-content h3 {
+    font-size: 17px;
+  }
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) and (min-width: 701px) {
+  .discovery-trending-carousel {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .discovery-trending-track {
+    gap: 20px;
+  }
+
+  .discovery-trending-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .discovery-trending-carousel {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .discovery-trending-track {
+    gap: 16px;
+  }
+
+  .discovery-trending-card {
+    flex: 0 0 calc(100vw - 72px);
+    width: calc(100vw - 72px);
+    min-width: calc(100vw - 72px);
+    max-width: 360px;
+  }
+
+  .discovery-trending-content {
+    padding-top: 12px;
+  }
+
+  .discovery-trending-content h3 {
+    font-size: 15px;
+  }
+}
+
+
+/* ============================================================
+   TRENDING CAROUSEL — NAVIGATION ARROWS
+============================================================ */
+
+.discovery-trending-carousel {
+  position: relative;
+}
+
+/* Navigation buttons */
+.discovery-trending-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #12294A;
+  color: #F5EFE4;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.discovery-trending-arrow i {
+  font-size: 17px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.discovery-trending-arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  background: #C55B2C;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+}
+
+.discovery-trending-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.discovery-trending-arrow:focus-visible {
+  outline: 3px solid #C55B2C;
+  outline-offset: 3px;
+}
+
+/* Position arrows at the outer edges of the expanded carousel */
+.discovery-trending-prev {
+  left: 12px;
+}
+
+.discovery-trending-next {
+  right: 12px;
+}
+
+/* Keep arrows comfortably above the product imagery */
+.discovery-trending-arrow {
+  margin-top: -5px;
+}
+
+/* ============================================================
+   LARGE DESKTOP
+============================================================ */
+
+@media (min-width: 1400px) {
+  .discovery-trending-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .discovery-trending-arrow i {
+    font-size: 18px;
+  }
+
+  .discovery-trending-prev {
+    left: 16px;
+  }
+
+  .discovery-trending-next {
+    right: 16px;
+  }
+}
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1100px) and (min-width: 701px) {
+  .discovery-trending-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .discovery-trending-prev {
+    left: 8px;
+  }
+
+  .discovery-trending-next {
+    right: 8px;
+  }
+}
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+  .discovery-trending-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .discovery-trending-arrow i {
+    font-size: 15px;
+  }
+
+  .discovery-trending-prev {
+    left: 6px;
+  }
+
+  .discovery-trending-next {
+    right: 6px;
+  }
+}
+
+
+/* ============================================================
+   TRENDING CAROUSEL — ARROW VISIBILITY ADJUSTMENT
+   Shift carousel slightly left so both arrows remain visible
+============================================================ */
+
+.discovery-trending-carousel {
+  width: calc(100vw - 24px);
+  margin-left: calc(50% - 50vw - 12px);
+  margin-right: 0;
+  padding-left: 40px;
+  padding-right: 64px;
+  box-sizing: border-box;
+}
+
+/* Keep both navigation arrows completely inside the carousel */
+.discovery-trending-prev {
+  left: 14px;
+}
+
+.discovery-trending-next {
+  right: 14px;
+}
+
+@media (min-width: 1400px) {
+  .discovery-trending-carousel {
+    width: calc(100vw - 32px);
+    margin-left: calc(50% - 50vw - 16px);
+    padding-left: 48px;
+    padding-right: 72px;
+  }
+
+  .discovery-trending-prev {
+    left: 18px;
+  }
+
+  .discovery-trending-next {
+    right: 18px;
+  }
+}
+
+
+/* ============================================================
+   TRENDING CAROUSEL — LEFT ARROW VISIBILITY ADJUSTMENT
+   Shift carousel slightly right
+============================================================ */
+
+.discovery-trending-carousel {
+  margin-left: calc(50% - 50vw + 12px);
+  margin-right: 0;
+}
+
+@media (min-width: 1400px) {
+  .discovery-trending-carousel {
+    margin-left: calc(50% - 50vw + 16px);
+  }
+}
+
+.discovery-trending-prev {
+  left: 14px;
+}
+
+.discovery-trending-next {
+  right: 14px;
+}
+
+@media (min-width: 1400px) {
+  .discovery-trending-prev {
+    left: 18px;
+  }
+
+  .discovery-trending-next {
+    right: 18px;
+  }
+}
+
+
+/* ============================================================
+   TRENDING CAROUSEL — SECOND RIGHT SHIFT
+============================================================ */
+
+.discovery-trending-carousel {
+  margin-left: calc(50% - 50vw + 32px) !important;
+}
+
+@media (min-width: 1400px) {
+  .discovery-trending-carousel {
+    margin-left: calc(50% - 50vw + 36px) !important;
+  }
+}
+
+.discovery-trending-prev {
+  left: 18px !important;
+}
+
+.discovery-trending-next {
+  right: 18px !important;
+}
+
+@media (min-width: 1400px) {
+  .discovery-trending-prev {
+    left: 22px !important;
+  }
+
+  .discovery-trending-next {
+    right: 22px !important;
+  }
+}
+
